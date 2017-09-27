@@ -34,16 +34,14 @@ int main(int argc, const char * argv[])
     uint32_t physicalDeviceCount = 0;
     VK_RESULT_CHECK(vkEnumeratePhysicalDevices(instance, &physicalDeviceCount, nullptr));
     
-    std::vector<VkPhysicalDevice> physicalDevices;
-    if(physicalDeviceCount > 0)
-    {
-        
-    }
-    else
+    if(physicalDeviceCount <= 0)
     {
         std::cout << "No physical device available" << std::endl;
         return EXIT_FAILURE;
     }
+    
+    std::vector<VkPhysicalDevice> physicalDevices{ physicalDeviceCount };
+    VK_RESULT_CHECK(vkEnumeratePhysicalDevices(instance, &physicalDeviceCount, physicalDevices.data()));
     
     return EXIT_SUCCESS;
 }
