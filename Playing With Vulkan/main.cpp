@@ -17,6 +17,12 @@
         exit(1); \
     }
 
+template<typename KeyType, typename ValueType>
+void PrintKeyValuePair(KeyType key, ValueType value)
+{
+    std::cout << key << " : " << value << std::endl;
+}
+
 int main(int argc, const char * argv[])
 {
     VkApplicationInfo appInfo = {};
@@ -42,6 +48,14 @@ int main(int argc, const char * argv[])
     
     std::vector<VkPhysicalDevice> physicalDevices{ physicalDeviceCount };
     VK_RESULT_CHECK(vkEnumeratePhysicalDevices(instance, &physicalDeviceCount, physicalDevices.data()));
+    
+    for(const auto& physicalDevice : physicalDevices)
+    {
+        VkPhysicalDeviceProperties props = {};
+        vkGetPhysicalDeviceProperties(physicalDevice, &props);
+        
+        PrintKeyValuePair("Device Name", props.deviceName);
+    }
     
     return EXIT_SUCCESS;
 }
