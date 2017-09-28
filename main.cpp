@@ -12,7 +12,7 @@
 
 #define VK_RESULT_CHECK(result) \
     if(result != VK_SUCCESS) { \
-        std::cerr << "Error: Line " << __LINE__ << std::endl; \
+        std::cerr << "Error: " << result << ": Line " << __LINE__ << std::endl; \
         std::cerr << #result << std::endl; \
         exit(1); \
     }
@@ -28,7 +28,7 @@ int main(int argc, const char * argv[])
     VkApplicationInfo appInfo = {};
     appInfo.sType = VK_STRUCTURE_TYPE_APPLICATION_INFO;
     appInfo.pApplicationName = "Playing with Vulkan";
-    appInfo.apiVersion = VK_MAKE_VERSION(0, 1, 0);
+    appInfo.apiVersion = VK_MAKE_VERSION(1, 0, 0);
     
     VkInstanceCreateInfo instanceCreateInfo = {};
     instanceCreateInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
@@ -56,6 +56,8 @@ int main(int argc, const char * argv[])
         
         PrintKeyValuePair("Device Name", props.deviceName);
     }
+
+    vkDestroyInstance(instance, nullptr);
     
     return EXIT_SUCCESS;
 }
