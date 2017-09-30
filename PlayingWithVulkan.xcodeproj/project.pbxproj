@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		464F1B061F7C3CC900E1F5EC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 464F1B051F7C3CC900E1F5EC /* main.cpp */; };
+		4649A1FE1F8021A700CB72C7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 464F1B051F7C3CC900E1F5EC /* main.cpp */; };
 		464F1B0E1F7C46D000E1F5EC /* MoltenVK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464F1B0D1F7C46D000E1F5EC /* MoltenVK.framework */; };
 		464F1B101F7C475700E1F5EC /* libMoltenVK.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 464F1B0F1F7C475700E1F5EC /* libMoltenVK.dylib */; };
 		464F1B121F7C48BB00E1F5EC /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464F1B111F7C48BB00E1F5EC /* CoreFoundation.framework */; };
@@ -66,7 +66,7 @@
 		464F1AF91F7C3CC900E1F5EC = {
 			isa = PBXGroup;
 			children = (
-				464F1B041F7C3CC900E1F5EC /* Playing With Vulkan */,
+				464F1B041F7C3CC900E1F5EC /* PlayingWithVulkan */,
 				464F1B031F7C3CC900E1F5EC /* Products */,
 				464F1B0C1F7C46CF00E1F5EC /* Frameworks */,
 			);
@@ -80,12 +80,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		464F1B041F7C3CC900E1F5EC /* Playing With Vulkan */ = {
+		464F1B041F7C3CC900E1F5EC /* PlayingWithVulkan */ = {
 			isa = PBXGroup;
 			children = (
 				464F1B051F7C3CC900E1F5EC /* main.cpp */,
 			);
-			path = "Playing With Vulkan";
+			name = PlayingWithVulkan;
 			sourceTree = "<group>";
 		};
 		464F1B0C1F7C46CF00E1F5EC /* Frameworks */ = {
@@ -141,7 +141,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 464F1AFD1F7C3CC900E1F5EC /* Build configuration list for PBXProject "Playing With Vulkan" */;
+			buildConfigurationList = 464F1AFD1F7C3CC900E1F5EC /* Build configuration list for PBXProject "PlayingWithVulkan" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -163,7 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				464F1B061F7C3CC900E1F5EC /* main.cpp in Sources */,
+				4649A1FE1F8021A700CB72C7 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +302,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		464F1AFD1F7C3CC900E1F5EC /* Build configuration list for PBXProject "Playing With Vulkan" */ = {
+		464F1AFD1F7C3CC900E1F5EC /* Build configuration list for PBXProject "PlayingWithVulkan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				464F1B071F7C3CC900E1F5EC /* Debug */,
