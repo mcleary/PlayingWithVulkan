@@ -62,9 +62,7 @@ int main(int argc, const char * argv[])
         VK_PRINT_PROPERTY(deviceProps.driverVersion);
         VK_PRINT_PROPERTY(deviceProps.apiVersion);
         VK_PRINT_PROPERTY(deviceProps.limits.maxFramebufferWidth);
-        VK_PRINT_PROPERTY(deviceProps.limits.maxFramebufferHeight);
-
-        PrintKeyValuePair("Device Name", deviceProps.deviceName);        
+        VK_PRINT_PROPERTY(deviceProps.limits.maxFramebufferHeight);        
     }
 
     vkDestroyInstance(instance, nullptr);
